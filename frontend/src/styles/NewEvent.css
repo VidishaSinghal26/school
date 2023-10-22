@@ -1,0 +1,249 @@
+ /* Styling section, giving background
+            image and dimensions */
+            .section1 {
+                width: 100%;
+                height: 70vh;
+                display: flex;
+                background:
+                    url('https://lh3.googleusercontent.com/p/AF1QipNqBexzpuHQnjQlh_wl8bg-Io-c40fsH4DbMRpd=s1360-w1360-h1020');
+                background-size: cover;
+                background-position: center;
+                filter: blur(0.3px);
+                -webkit-filter: blur(0.3px);
+            }
+            /* Styling the left floating section */
+            .section1 .leftBox {
+                width: 50%;
+                height: 100%;
+                /* float: left; */
+                padding: 50px;
+                box-sizing: border-box;
+            }
+            /* Styling the background of 
+                left floating section */
+            .section1 .leftBox .content {
+                color: white;
+                background: rgb(2,2,70,.800);
+                padding: 40px;
+                transition: .5s;
+            }
+            /* Styling the hover effect  
+                of left floating section */
+            .section1 .leftBox .content:hover {
+                background: rgba(3, 3, 48, 0.77);
+            }
+            /* Styling the header of left 
+                floating section */
+            .section1 .leftBox .content h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 0p;
+                text-transform: uppercase;
+                color: white;
+            }
+            /* Styling the paragraph of 
+                left floating section */
+            .section1 .leftBox .content p {
+                margin: 10px 0 0;
+                padding: 0;
+            }
+            /* Styling the three events section */
+            .section1 .events {
+                overflow: auto;
+                position: relative;
+                width: 50%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                float: right;
+                box-sizing: border-box;
+            }
+            /* Styling the links of 
+            the events section */
+            .section1 .events ul {
+                position: relative;
+                /* top: 35%; */
+                display: grid;
+                color: darkblue;
+                /* transform: translateY(-30%); */
+                margin: 0;
+                padding: 30px;
+                box-sizing: border-box;
+            }
+            /* Styling the lists of the event section */
+            .section1 .events ul li {
+                list-style: none;
+                background: #fff;
+                box-sizing: border-box;
+                /* height: 150px; */
+                margin: 15px 0;
+            }
+            /* Styling the time class of events section */
+            .section1 .events ul li .time {
+                position: relative;
+                padding: 20px;
+                background: rgb(2,2,70);
+                box-sizing: border-box;
+                width: 35%;
+                height: 100%;
+                float: left;
+                text-align: center;
+                transition: .5s;
+            }
+            /* Styling the hover effect
+                of events section */
+            .section1 .events ul li:hover .time {
+                background:rgba(2, 2, 70, 0.798);
+            }
+            /* Styling the header of time 
+                class of events section */
+            .section1 .events ul li .time h2 {
+                position: absolute;
+                margin: 0;
+                padding: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                /* font-size: 60px; */
+                line-height: 30px;
+            }
+            /* Styling the texts of time 
+            class of events section */
+            .section1 .events ul li .time h2 span {
+                /* font-size: 30px; */
+            }
+     
+            /* Styling the details 
+            class of events section */
+            .section1 .events ul li .details {
+                padding: 20px;
+                background: #fff;
+                box-sizing: border-box;
+                width: 60%;
+                height: 100%;
+                float: left;
+                line-height: 22px;
+            }
+            /* Styling the header of the 
+            details class of events section */
+            .section1 .events ul li .details h3 {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                /* font-size: 22px; */
+            }
+            /* Styling the lists of details 
+            class of events section */
+            .section1 .events ul li .details p {
+                position: relative;
+                margin: 10px 0 0;
+                padding: 0;
+                /* font-size: 16px; */
+            }
+            /* Styling the links of details
+            class of events section */
+            .section1 .events ul li .details a {
+                display: inline-block;
+                text-decoration: none;
+                padding: 2px 10px;
+                border: 1.5px solid #262626;
+                margin-top: 8px;
+                /* font-size: 18px; */
+                transition: .5s;
+            }
+            /* Styling the details class's hover effect */
+            .section1 .events ul li .details a:hover {
+                background: rgba(2, 2, 70, 0.798);
+                color: #fff;
+                border-color: rgba(2, 2, 70, 0.798);
+            }
+
+
+
+
+
+
+
+
+
+
+/* src/styles/NewEvent.css */
+/* ... (previous CSS rules) */
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .section1 {
+      flex-direction: column;
+    }
+  
+    .section1 .leftBox,
+    .section1 .events {
+      width: 100%;
+      height: 50%;
+      float: none;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    .section1 .leftBox .content {
+
+      padding: 20px;
+    }
+  
+    .section1 .events ul {
+        display: grid;
+        justify-content: center;
+        /* transform: translateY(-10%); */
+      padding: 10px;
+    }
+  
+    .section1 .events ul li {
+      width: 100%;
+      margin: 15px 0px;
+      height: auto;
+      float: none;
+    }
+  
+    .section1 .events ul li .time {
+      /* width: 100%; */
+      text-align: center;
+      padding: 20px;
+      margin-right: 15px;
+    }
+  
+    .section1 .events ul li .details {
+      width: 100%;
+      float: none;
+      
+    }
+  
+    /* .section1 .events ul li .details h3 {
+      font-size: 22px;
+    }
+  
+    .section1 .events ul li .details p {
+      font-size: 16px;
+    } */
+  }
+  
+  /* Media query for screens smaller than 426px */
+  @media (max-width: 426px) {
+    .section1 .leftBox {
+      padding: 10px;
+    }
+
+  
+    .section1 .events {
+      padding: 5px;
+    }
+  
+    .section1 .events ul li .details {
+      line-height: 15px;
+    }
+  
+    .section1 .events ul li .details h3 {
+      line-height: 20px;
+      font-size: 6vw;
+    }
+  }
+  

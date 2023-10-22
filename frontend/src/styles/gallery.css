@@ -1,0 +1,51 @@
+/* Slideshow */
+
+.gallery-slideshow {
+    /* margin: 0 auto; */
+    overflow: hidden;
+    margin-left:5vw;
+    margin-right: 5vw;
+    /* max-width: 500px; */
+  }
+  
+  .gallery-slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+
+  }
+  
+  .gallery-slide {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: blur(0.2px); */
+    height: 20vw;
+    width: 20vw;
+    margin: 0.5vw;
+  }
+  
+  /* Buttons */
+  .gallery-btn{
+    padding: 0.5vw;
+    position: relative;
+    top:-2vw;
+    left: 40vw;
+  }
+  
+  @media (max-width:435px){
+    .gallery-slide{
+      height: 50vw;
+      width: 50vw;
+  
+    }
+    .gallery-btn{
+
+      position: relative;
+      top:-5vw;
+      left: 30vw;
+    }
+
+    }
+  
+  

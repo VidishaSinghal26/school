@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width:1024px){
+    .mt-5 {
+        margin-top: 0rem !important;
+    }
+}

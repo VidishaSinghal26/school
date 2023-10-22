@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font-family: FontAwesome; */
+}
+body {
+  
+  margin: 0;
+  padding: 0;
+ 
+  background-color: #fcfcfc;
+  display: block;
+
+}
+
+.nb-container{
+  /* font-family: 'Poppins', sans-serif; */
+  max-width: 1900px;
+  /* margin: 0 auto; */
+  padding: 0 35px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nb-navbar {
+
+  height: 95px;
+  background:linear-gradient( rgb(2, 2, 70) 0% ,rgb(2,2,70) 20% , rgb(255, 251, 251) 20%, rgb(255, 251, 251) 100%);
+  position: relative;
+}
+
+.logo  img{
+  width: 350px;
+  position: absolute;
+  top: 1.5vw;
+  /* display: flex;
+  align-items: center;
+  justify-self: center; */
+}
+
+.nb-menu-icon {
+  display: none;
+}
+
+.nb-nav-elements {
+  
+  display: flex;
+  /* align-items: center; */
+}
+
+.nb-nav-elements .nb-upper-ul {
+  font-family: 'PT Serif';
+  margin-top: 1.5vw;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  list-style-type: none;
+}
+
+.nb-nav-elements .nb-upper-ul .nb-navbar-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+
+.nb-nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  /* color: #2f234f; */
+  color: darkblue;
+  text-decoration: none;
+}
+
+.nb-nav-elements ul a.active {
+  /* color: #574c4c; */
+  color: darkblue;
+  font-weight: 500;
+  position: relative;
+}
+
+.nb-nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* background-color: #b83b99; */
+  background-color: darkblue;
+}
+
+.nb-navbar-item {
+
+  position: relative;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+}
+
+.nb-navbar-item {
+  top: 0.7vw;
+  font-size: 1.1vw;
+  font-weight: 510;
+
+}
+.nb-nav-text {
+  cursor: pointer;
+}
+
+.nb-dropdown {
+  z-index: 99;
+  position: absolute;
+  top: 100%;
+  left: -100px;
+  display: none;
+  box-shadow: 1px 1px 5px grey;
+  background: rgb(255, 251, 251);
+}
+
+.nb-dropdown .nb-lower-ul {
+  min-width: 250px;
+  /* width: 100%; */
+  color: darkblue;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 10px;
+  margin-right: 0px;
+}
+
+.nb-dropdown li {
+  color: darkblue;
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+  cursor: pointer;
+}
+
+.nb-navbar-item:hover:not(:last-child){
+  background-color: #e7d3e288;
+  padding: 0.3vw;
+  border-radius: 6px;
+}
+.nb-navbar-item:hover .nb-dropdown {
+  margin-top: 0.1vw;
+  display: block;
+}
+
+.nb-button{
+  color: darkblue;
+  padding: 2px 5px;
+  border-color: rgb(2,2,70);
+  box-shadow: none;
+  border-radius: 8px;
+  background-color: rgb(255, 251, 251);
+}
+
+.nb-button:hover{
+  background-color: #e7d3e288;
+  padding: 0.3vw;
+  border-radius: 6px;
+}
+@media (max-width: 1024px) {
+  .nb-nav-elements ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+  .nb-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .nb-nav-elements {
+    /* margin-left:5vw ; */
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: rgb(255, 251, 251);
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+  .nb-nav-elements .nb-upper-ul{
+    padding-left: 5vw;
+
+  }
+
+  .nb-nav-elements .nb-upper-ul {
+    gap: 7px;
+    padding: 10px 30px;
+  }
+
+
+  .nb-nav-elements.active {
+    width: 250px;
+  }
+
+  .nb-nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nb-nav-elements ul li {
+    margin-right: unset;
+    margin-top: 2px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .logo img{
+    width: 65vw;
+    top:4.5vw;
+  }
+  .nb-container{
+    padding: 0vw 5vw ;
+  }
+  .nb-nav-elements ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nb-navbar{
+    height: 75px;
+  }
+
+  .nb-navbar-item {
+    top: 0vw;
+    font-size: 4vw;
+    font-weight: 500;
+  
+  }
+  .nb-dropdown{
+    left: -3vw;
+  }
+
+  .nb-logo img{
+    top:12px;
+    width: 60vw;
+  }
+}
